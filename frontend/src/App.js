@@ -2,7 +2,7 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import Header from "./component/layout/Header/Header.js";
 import Footer from "./component/layout/Footer/Footer.js";
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import React from "react";
 import Home from "./component/Home/Home";
 
@@ -19,24 +19,20 @@ import About from "./component/layout/About/About";
 import NotFound from "./component/layout/Not Found/NotFound";
 
 function App() {
-
   return (
     <Router>
-    <Header />
-  
-  <Switch>
+      <Header />
 
-    <Route exact path="/" component={Home} />
-    <Route exact path="/contact" component={Contact} />
-    <Route exact path="/about" component={About} />
-    <Route exact path="/products" component={Products} />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/logout" component={Products} />
 
-    <Route exact path="/login" component={LoginSignUp} />
+        <Route exact path="/login" component={LoginSignUp} />
+      </Switch>
 
-
-</Switch>
-
-    <Footer/>
+      <Footer />
     </Router>
   );
 }

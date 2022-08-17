@@ -50,7 +50,7 @@ const LoginSignUp = ({ history, location }) => {
   };
 
   const registerDataChange = (e) => {
-      setUser({ ...user, [e.target.name]: e.target.value });
+    setUser({ ...user, [e.target.name]: e.target.value });
   };
 
   const redirect = location.search ? location.search.split("=")[1] : "/";
@@ -86,9 +86,9 @@ const LoginSignUp = ({ history, location }) => {
 
   return (
     <Fragment>
-    {loading ? (
-      <Loader />
-    ) : (
+      {loading ? (
+        <Loader />
+      ) : (
         <Fragment>
           <div className="LoginSignUpContainer">
             <div className="LoginSignUpBox">
@@ -167,8 +167,8 @@ const LoginSignUp = ({ history, location }) => {
             </div>
           </div>
         </Fragment>
-          )}
-          </Fragment>
+      )}
+    </Fragment>
   );
 };
 
